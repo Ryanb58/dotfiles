@@ -1,8 +1,3 @@
-python from powerline.vim import setup as powerline_setup
-python powerline_setup()
-python del powerline_setup
-set laststatus=2
-set t_Co=256
 
 "colors {{{
 syntax enable           " enable syntax processing
@@ -33,3 +28,11 @@ set wildmenu
 set lazyredraw
 set showmatch           " higlight matching parenthesis
 " }}}
+
+" Powerline for vim.
+python from powerline.vim import setup as powerline_setup
+python powerline_setup()
+python del powerline_setup
+set laststatus=2
+set t_Co=256
+
