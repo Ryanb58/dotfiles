@@ -30,7 +30,31 @@ font pango:monospace 8
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec terminator
+
+#############################
+# Custom Commands
+#############################
+
+# Lock computer (CTRL + ALT + L)
+bindsym $mod+CTRL+l exec i3lock
+
+# Pulse Audio controls
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
+
+# Sreen brightness controls
+bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
+bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightness
+
+# Open up the gnome-control-center
+bindsys $mod+Shift+n exec gnome-control-center
+
+# Move workspace to the left.
+bindsym $mod+m move workspace to output left
+
+#############################
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -44,8 +68,8 @@ bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
 # change focus
 bindsym $mod+h focus left
-bindsym $mod+k focus down
-bindsym $mod+j focus up
+bindsym $mod+k focus up
+bindsym $mod+j focus down
 bindsym $mod+l focus right
 
 # alternatively, you can use the cursor keys:
@@ -56,8 +80,8 @@ bindsym $mod+Right focus right
 
 # move focused window
 bindsym $mod+Shift+h move left
-bindsym $mod+Shift+k move down
-bindsym $mod+Shift+j move up
+bindsym $mod+Shift+k move up
+bindsym $mod+Shift+j move down
 bindsym $mod+Shift+l move right
 
 # alternatively, you can use the cursor keys:
@@ -155,7 +179,3 @@ bar {
         status_command i3status
         tray_output primary
 }
-
-bindsys $mod+Shift+l exec i3lock
-bindsys $mod+Shift+n exec gnome-control-center
-
