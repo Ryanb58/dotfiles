@@ -14,4 +14,5 @@ else
     echo "Fedora"
     echo "Updating..."
     sudo yum update
+    sudo dnf install i3 i3status dmenu i3lock xbacklight feh conky
 fi

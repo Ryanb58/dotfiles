@@ -14,5 +14,3 @@
 	branch = true
 	interactive = true
 
-[commit]
-	gpgsign = true
