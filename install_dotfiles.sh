@@ -144,8 +144,16 @@ print_success() {
 
 # finds all .dotfiles in this folder
 declare -a FILES_TO_SYMLINK=$(find . -type f -name ".*" -not -name .DS_Store -not -name .git -not -name .osx | sed -e 's|//|/|' | sed -e 's|./.|.|')
-FILES_TO_SYMLINK="$FILES_TO_SYMLINK .config/i3/config" # add in vim and the binaries
+FILES_TO_SYMLINK="$FILES_TO_SYMLINK .config/i3/config"
 
+if (python -mplatform | grep -qi Ubuntu)
+then
+    # Ubuntu
+    FILES_TO_SYMLINK+=" .local/share/applications/unity-settings.desktop"
+else
+    # Fedora
+    FILES_TO_SYMLINK+=" .local/share/applications/gnome-settings.desktop"
+fi
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 

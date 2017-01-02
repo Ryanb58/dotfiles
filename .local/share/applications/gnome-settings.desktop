@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Name=Settings
+Comment=Open the Gnome Settings from within i3 window manager.
+Exec=unset XDG_CURRENT_DESKTOP; gnome-control-center
+Terminal=false
+Type=Application
+Icon=gnome-control-center
+Categories=Utility;Application;	

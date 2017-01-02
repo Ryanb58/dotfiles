@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Name=Settings
+Comment=Open the Unity Settings from within i3 window manager.
+Exec=unset XDG_CURRENT_DESKTOP; unity-control-center
+Terminal=false
+Type=Application
+Icon=unity-control-center
+Categories=Utility;Application;	
