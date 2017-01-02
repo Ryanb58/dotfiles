@@ -197,6 +197,11 @@ system_link_dotfiles() {
 
 }
 
+remove_broken_sys_links() {
+    # Not recursive: http://stackoverflow.com/a/22099005
+    find -L ~/.local/share/applications -name . -o -type d -prune -o -type l -exec rm {} +
+}
+
 copy_gitconfig() {
     # Copy over .gitconfig separately as each machine will have different values.
     cp -iv .gitconfig ~/
