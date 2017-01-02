@@ -143,7 +143,7 @@ print_success() {
 
 
 # finds all .dotfiles in this folder
-declare -a FILES_TO_SYMLINK=$(find . -type f -name ".*" -not -name .DS_Store -not -name .git -not -name .osx | sed -e 's|//|/|' | sed -e 's|./.|.|')
+declare -a FILES_TO_SYMLINK=$(find . -type f -name ".*" -not -name .DS_Store -not -name .git -not -name .gitconfig -not -name .osx | sed -e 's|//|/|' | sed -e 's|./.|.|')
 FILES_TO_SYMLINK="$FILES_TO_SYMLINK .config/i3/config"
 
 if (python -mplatform | grep -qi Ubuntu)
@@ -157,7 +157,7 @@ fi
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-main() {
+system_link_dotfiles() {
 
     local i=""
     local sourceFile=""
@@ -197,5 +197,13 @@ main() {
 
 }
 
-main
+copy_gitconfig() {
+    # Copy over .gitconfig separately as each machine will have different values.
+    cp -iv .gitconfig ~/
+}
+
+
+
+system_link_dotfiles
+copy_gitconfig
 
