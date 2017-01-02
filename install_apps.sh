@@ -16,3 +16,13 @@ else
     sudo yum update
     sudo dnf install i3 i3status dmenu i3lock xbacklight feh conky
 fi
+
+# Install Node Version Manager: https://github.com/creationix/nvm
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.0/install.sh | bash
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
+
+# Install and set the latest version of node as the default.
+nvm install Node
+nvm use Node
+nvm alias default node
