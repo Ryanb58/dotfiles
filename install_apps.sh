@@ -23,6 +23,6 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
 
 # Install and set the latest version of node as the default.
-nvm install Node
-nvm use Node
+nvm install node
+nvm use node
 nvm alias default node
