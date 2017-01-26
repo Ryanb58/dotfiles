@@ -10,6 +10,9 @@ then
     # every time you open it.
     echo "Fixing nautilus"
     gsettings set org.gnome.desktop.background show-desktop-icons false
+
+    echo "Installing i3blocks"
+    sudo apt install i3blocks
 else
     echo "Fedora"
     echo "Updating..."
