@@ -6,6 +6,11 @@ then
     echo "Ubuntu"
     echo "Updating..."
     sudo apt-get update
+
+    # Install i3 window Manager
+    echo "Installing i3..."
+    sudo apt-get install i3
+
     # Fix for nautilus so that it doesn't try to show the desktop icons
     # every time you open it.
     echo "Fixing nautilus"
