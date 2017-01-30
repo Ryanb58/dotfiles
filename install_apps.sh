@@ -29,6 +29,8 @@ then
 
     echo "Installing i3blocks"
     sudo apt install i3blocks
+    echo "Installing font awesome"
+    sudo apt install fonts-font-awesome
 else
     echo "Fedora"
     echo "Updating..."
