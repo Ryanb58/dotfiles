@@ -11,6 +11,17 @@ then
     echo "Installing i3..."
     sudo apt-get install i3
 
+    hd_resolution="3200x1800"
+    screen_resolution=`xrandr | grep '*' | awk '{ print $1 }'`
+
+    if [ $hd_resolution == $screen_resolution ]
+    then
+        echo "Setting DPI"
+        xrandr --dpi 184
+    else
+        echo "No need to set DPI. Current Screen is not 3200x1800."
+    fi
+
     # Fix for nautilus so that it doesn't try to show the desktop icons
     # every time you open it.
     echo "Fixing nautilus"
@@ -18,6 +29,8 @@ then
 
     echo "Installing i3blocks"
     sudo apt install i3blocks
+    echo "Installing font awesome"
+    sudo apt install fonts-font-awesome
 else
     echo "Fedora"
     echo "Updating..."
