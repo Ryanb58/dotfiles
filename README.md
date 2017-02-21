@@ -13,3 +13,11 @@ bash install_apps.sh
 ```
 bash install_dotfiles.sh
 ```
+
+#### Configure the Screen Montior:
+
+Dash > Startup Applications > Add the command:
+
+```
+python3 ~/github/dotfiles/screen_monitor.py
+```
