@@ -8,6 +8,17 @@ disconnect_command = "bash ~/.screenlayout/laptop.sh"
 # ---
 
 
+# Wait for xrandr to startup before executing the changes.
+while True:
+    time.sleep(5)
+    try:
+        subprocess.Popen(["xrandr"])
+    except:
+        pass
+    else:
+        break
+
+
 def get(cmd):
     return subprocess.check_output(cmd).decode("utf-8")
 
@@ -32,7 +43,6 @@ while True:
     xr2 = count_screens(get(["xrandr"]))
     # check if there is a change in the screen state
     if xr2 != xr1:
-        print("change")
         if xr2 == 2:
 
             # command to run if connected (two screens)
