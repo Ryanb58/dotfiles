@@ -31,6 +31,8 @@ then
     sudo apt install i3blocks
     echo "Installing font awesome"
     sudo apt install fonts-font-awesome
+    echo "installing xbacklight"
+    sudo apt install xbacklight
 else
     echo "Fedora"
     echo "Updating..."
