@@ -33,6 +33,12 @@ then
     sudo apt install fonts-font-awesome
     echo "installing xbacklight"
     sudo apt install xbacklight
+    echo "installing sysdig & csysdig"
+    sudo apt install sysdig
+    echo "installing iftop"
+    sudo apt install iftop
+    echo "installing slurm"
+    sudo apt install slurm
 else
     echo "Fedora"
     echo "Updating..."
