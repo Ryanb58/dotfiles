@@ -1,0 +1,13 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+connect_command	../screen_monitor.py	/^connect_command = "bash ~\/.screenlayout\/office_docked.sh"$/;"	kind:variable	line:6
+count_screens	../screen_monitor.py	/^def count_screens(xr):$/;"	kind:function	line:27
+disconnect_command	../screen_monitor.py	/^disconnect_command = "bash ~\/.screenlayout\/laptop.sh"$/;"	kind:variable	line:7
+get	../screen_monitor.py	/^def get(cmd):$/;"	kind:function	line:22
+run_command	../screen_monitor.py	/^def run_command(cmd):$/;"	kind:function	line:32
+screen_monitor.py	../screen_monitor.py	1;"	kind:file	line:1
+xr1	../screen_monitor.py	/^xr1 = None$/;"	kind:variable	line:37
