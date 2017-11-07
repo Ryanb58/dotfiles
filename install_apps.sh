@@ -27,7 +27,7 @@ then
     echo "Fixing nautilus"
     gsettings set org.gnome.desktop.background show-desktop-icons false
 
-    echo "Installing i3blocks"
+    echo "Installing i3blocks - i3status bar replacement"
     sudo apt install i3blocks
     echo "Installing font awesome"
     sudo apt install fonts-font-awesome
@@ -35,10 +35,12 @@ then
     sudo apt install xbacklight
     echo "installing sysdig & csysdig"
     sudo apt install sysdig
-    echo "installing iftop"
+    echo "installing iftop - Display bandwidth per interface."
     sudo apt install iftop
-    echo "installing slurm"
+    echo "installing slurm - A Network Load Monitor"
     sudo apt install slurm
+    echo "installing jq - Command line JSON Print Pretty"
+    sudo apt install jq
 else
     echo "Fedora"
     echo "Updating..."
