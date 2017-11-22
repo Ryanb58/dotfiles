@@ -41,6 +41,8 @@ then
     sudo apt install slurm
     echo "installing jq - Command line JSON Print Pretty"
     sudo apt install jq
+    echo "installing dtrx - File Extractor"
+    sudo apt install dtrx
 else
     echo "Fedora"
     echo "Updating..."
